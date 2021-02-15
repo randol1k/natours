@@ -581,6 +581,7 @@ body {
     background-image: linear-gradient(to bottom right, #2a96ff, #5644fa); }
 
 .card__top__container {
+  -webkit-background-blend-mode: screen;
   background-blend-mode: screen;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
