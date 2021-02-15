@@ -532,6 +532,7 @@ body {
   display: block;
   height: 15rem;
   object-fit: cover;
+  overflow: hidden;
   transform: scale(1.4);
   transition: all 0.4s;
   width: 15rem; }
