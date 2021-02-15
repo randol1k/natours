@@ -1,0 +1,64 @@
+.review__container {
+    background-color: rgba(white, 0.7);
+    margin: 0 auto 7rem;
+    max-width: 100rem;
+    padding: 6rem;
+    text-align: left;
+    transform: skewX(-15deg);
+
+    @media only screen and (max-width: $width-1200) {
+        padding: 2rem;
+        transform: skewX(0);
+    }
+
+    &:hover .review__img {
+        filter: blur(1px) brightness(80%);
+        transform: scale(1);
+    }
+
+    &:hover .reviewer__name--text {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.review__figure {
+    @include cleafrix;
+    transform: skewX(15deg);
+
+    @media only screen and (max-width: $width-1200) {
+        transform: skewX(0);
+    }
+}
+
+.reviewer--photo__container {
+    border-radius: 50%;
+    float: left;
+    height: 15rem;
+    margin-right: 4rem;
+    overflow: hidden;
+    position: relative;
+    width: 15rem;
+    shape-outside: circle(50%);
+}
+
+.review__img {
+    border-radius: 50%;
+    display: block;
+    height: 15rem;
+    object-fit: cover;
+    transform: scale(1.4);
+    transition: all 0.4s;
+    width: 15rem;
+}
+
+.reviewer__name--text {
+    @include centerPosition;
+    color: white;
+    font-size: 2rem;
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translate(-50%, -10%);
+    transition: all 0.4s;
+}

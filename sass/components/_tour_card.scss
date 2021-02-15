@@ -1,0 +1,118 @@
+.tour__card {
+    height: 52rem;
+    perspective: 150rem;
+    position: relative;
+
+    &:hover .front__side {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .back__side {
+        transform: rotateY(0);
+    }
+}
+
+.card__side {
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: $shadow-hover;
+    height: 100%;
+    width: 100%;
+}
+
+.front__side {
+    position: absolute;
+    transition: all 1s;
+}
+
+.back__side {
+    transition: all 1s;
+    transform: rotateY(-180deg);
+
+    &--orange {
+        background-image: linear-gradient(
+            to bottom right,
+            rgba($color-orange-light, 1),
+            rgba($color-orange-dark, 1)
+        );
+    }
+
+    &--green {
+        background-image: linear-gradient(
+            to bottom right,
+            rgba($color-green-light, 1),
+            rgba($color-green-dark, 1)
+        );
+    }
+
+    &--blue {
+        background-image: linear-gradient(
+            to bottom right,
+            rgba($color-blue-light, 1),
+            rgba($color-blue-dark, 1)
+        );
+    }
+}
+
+.card__top__container {
+    background-blend-mode: screen;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    height: 40%;
+    position: relative;
+    width: auto;
+
+    &--orange {
+        background-image: linear-gradient(
+                $color-orange-light,
+                $color-orange-dark
+            ),
+            url(../../img/nat-5.jpg);
+    }
+
+    &--green {
+        background-image: linear-gradient($color-green-light, $color-green-dark),
+            url(../../img/nat-6.jpg);
+    }
+
+    &--blue {
+        background-image: linear-gradient($color-blue-light, $color-blue-dark),
+            url(../../img/nat-7.jpg);
+    }
+}
+
+.card__body__container {
+    padding: 3rem 6rem;
+}
+
+.tour__details-list {
+    list-style: none;
+}
+
+.tour__details-item {
+    padding: 1rem;
+    text-align: center;
+
+    &:not(:last-child) {
+        border-bottom: 2px solid $color-grey-border;
+    }
+}
+
+.back__side {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.only__word {
+    font-size: 1.4rem;
+    margin-top: 12rem;
+}
+
+.tour__price {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 8rem;
+}

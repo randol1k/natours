@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px
+
+    @media only screen and (max-width: $width-800) {
+        font-size: 56.25%; // 9px
+    }
+}
+
+body {
+    color: $color-grey-text;
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+    padding: 3rem;
+
+    @media only screen and (max-width: $width-1200) {
+        padding: 0;
+    }
+}
+
+.section {
+    max-width: 144rem;
+    margin: 0 auto;
+}

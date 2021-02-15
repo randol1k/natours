@@ -1,0 +1,32 @@
+.section--reviews {
+    background-color: rgba(white, 0.85);
+    padding: 15rem;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width: $width-800) {
+        padding: 10rem;
+    }
+
+    @media only screen and (max-width: $width-600) {
+        padding: 7rem;
+    }
+
+    @media only screen and (max-width: $width-500) {
+        padding: 7rem 2rem;
+    }
+}
+
+.reviews-main__container {
+    text-align: center;
+}
+
+.reviews--bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+}

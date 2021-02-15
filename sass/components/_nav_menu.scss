@@ -1,0 +1,90 @@
+.nav-menu--toggler {
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 7rem;
+    position: fixed;
+    top: 7rem;
+    right: 5rem;
+    width: 7rem;
+    z-index: 3;
+
+    @media only screen and (max-width: $width-1200) {
+        top: 3rem;
+    }
+
+    &:hover .nav-menu--icon::before {
+        transform: translateY(-9px);
+    }
+
+    &:hover .nav-menu--icon::after {
+        transform: translateY(8px);
+    }
+}
+
+.nav-menu--icon {
+    @include centerPosition;
+    background-color: black;
+    display: block;
+    height: 2px;
+    transition: all 0.2s;
+    width: 3rem;
+
+    &::before {
+        background-color: black;
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        transition: all 0.2s;
+        transform: translateY(-7px);
+    }
+
+    &::after {
+        background-color: black;
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        transition: all 0.2s;
+        transform: translateY(6px);
+    }
+}
+
+.clicked {
+    & .nav-menu--icon {
+        background-color: white;
+    }
+
+    & .nav-menu--icon::before {
+        transform: rotateZ(45deg);
+    }
+
+    & .nav-menu--icon::after {
+        transform: translateY(-2px) rotateZ(-45deg);
+    }
+}
+
+.nav-menu__body {
+    background-image: linear-gradient(
+        to bottom left,
+        $color-green-light,
+        $color-green-primary
+    );
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.2s;
+    width: 100vw;
+    z-index: 2;
+}
+
+.nav-menu__list {
+    @include centerPosition;
+    list-style: none;
+}
+
+.nav-menu__item {
+    margin-bottom: 1rem;
+}

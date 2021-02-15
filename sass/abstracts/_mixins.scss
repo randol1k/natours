@@ -1,0 +1,17 @@
+@mixin centerPosition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin contentAlignedCenter {
+    max-width: 116rem;
+    margin: 0 auto;
+}
+
+@mixin cleafrix {
+    content: "";
+    display: table;
+    clear: both;
+}

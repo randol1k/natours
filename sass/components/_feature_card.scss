@@ -1,0 +1,31 @@
+.feature__card {
+    background-image: linear-gradient(
+        rgba($color-grey-bg, 0.7),
+        rgba($color-grey-bg, 0.7)
+    );
+    border-radius: 0.5rem;
+    box-shadow: $shadow-hover;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    transition: all 0.2s;
+
+    // &:not(:last-child) {
+    //     margin-right: 5rem;
+    // }
+
+    &:hover {
+        transform: translateY(-2rem) scale(1.03);
+    }
+}
+
+.feature__icon {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-green-light, 1),
+        rgba($color-green-dark, 1)
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 6rem;
+    margin: 2rem 0;
+}

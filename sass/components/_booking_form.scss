@@ -1,0 +1,91 @@
+.booking__form {
+    width: 45%;
+
+    @media only screen and (max-width: $width-800) {
+        width: 70%;
+    }
+
+    @media only screen and (max-width: $width-800) {
+        width: 100%;
+    }
+}
+
+.form--fields__container {
+    position: relative;
+}
+
+.input__area {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: $color-grey-text;
+    font-size: 1.4rem;
+    height: 4rem;
+    margin-bottom: 3.5rem;
+    outline: none;
+    padding: 2.5rem 2rem;
+    transition: all 0.2s;
+    width: 85%;
+
+    &:focus {
+        border-bottom: 3px solid $color-green-primary;
+        box-shadow: $shadow-active;
+
+        &:invalid {
+            border-bottom: 3px solid orangered;
+        }
+    }
+
+    &:not(:placeholder-shown) + .input__label {
+        opacity: 1;
+        transform: translateY(3rem);
+    }
+}
+
+.input__label {
+    color: $color-grey-dark;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 2rem;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.form--radio__container {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.input__radio {
+    display: none;
+    &:checked + .radio__label::after {
+        background-color: $color-green-primary;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 1.6rem;
+        position: absolute;
+        left: -3.3rem;
+        width: 1.6rem;
+    }
+}
+
+.radio__label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 1.6rem;
+    margin-left: 4rem;
+
+    &::before {
+        border: 0.4rem solid $color-green-primary;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 3rem;
+        position: absolute;
+        left: -4rem;
+        width: 3rem;
+    }
+}

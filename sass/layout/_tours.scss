@@ -1,0 +1,23 @@
+.section--tours {
+    background-color: $color-grey-bg;
+    margin-top: -25rem;
+    padding: 30rem 4rem 15rem 4rem;
+    overflow: hidden;
+    text-align: center;
+
+    @media only screen and (max-width: $width-800) {
+        padding: 20rem 4rem 10rem 4rem;
+    }
+
+    @media only screen and (max-width: $width-600) {
+        padding: 15rem 2rem 7rem;
+    }
+}
+
+.tours-main__container {
+    @include contentAlignedCenter;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 35rem));
+    justify-content: center;
+}
